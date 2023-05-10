@@ -492,6 +492,8 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 25px;
+  padding-top: 25px;
 }
 @media (min-width: 576px) {
   .container {
@@ -533,14 +535,16 @@ pre code {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-content: center;
+  text-align: -webkit-center;
 }
-.about_section {
+/* .about_section {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   gap: 50px;
   justify-content: center;
-}
+  flex-direction: column;
+} */
 
 .no-gutters {
   margin-right: 0;

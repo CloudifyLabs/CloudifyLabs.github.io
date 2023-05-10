@@ -74,8 +74,8 @@
   });
 
   // Navigation active state on scroll
-  var nav_sections = $('section');
-  var main_nav = $('.main-nav, .mobile-nav');
+  var nav_sections = $('section, footer');
+  var main_nav = $('.main-nav, .mobile-nav, .footer-nav');
   var main_nav_height = $('#header').outerHeight();
 
   $(window).on('scroll', function () {
@@ -118,6 +118,39 @@
     loop: true,
     items: 1
   });
+
+  const form = document.querySelector('.contactForm');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const successMsg = document.querySelector('#sendmessage');
+    successMsg.style.display = 'block';
+    form.reset();
+  });
+
+  // function toggleTeamMembers() {
+  //   const screenWidth = $(window).width();
+  //   const teamMembers = $('.team-members .row > div');
+  //   const seeMoreButton = $('.see-more');
+  
+  //   // Show all team members for large screens
+  //   if (screenWidth > 991) {
+  //     teamMembers.css('display', 'block');
+  //     seeMoreButton.css('display', 'none');
+  //   }
+  //   // Show only the first three team members for small screens
+  //   else {
+  //     teamMembers.each(function(index) {
+  //       if (index < 3) {
+  //         $(this).css('display', 'block');
+  //       } else {
+  //         $(this).css('display', 'none');
+  //       }
+  //     });
+  //     seeMoreButton.css('display', 'block');
+  //   }
+  // }
+  
 
 })(jQuery);
 

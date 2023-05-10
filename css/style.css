@@ -616,6 +616,11 @@ h6 {
   font-size: 24px;
 }
 
+#about .container .about_section {
+  display: flex;
+  flex-direction: row;
+}
+
 /* Products Section
 --------------------------------*/
 
@@ -1340,7 +1345,8 @@ h6 {
 }
 
 #footer .footer-top .footer-links ul li {
-  padding: 8px 0;
+  padding: 0; 
+  margin-right: 0 !important;
 }
 
 #footer .footer-top .footer-links ul li:first-child {
@@ -1515,5 +1521,12 @@ h6 {
 @media (max-width: 574px) {
   #intro {
     padding: 100px 0 20px 0;
+  }
+}
+
+@media (max-width: 960px) {
+  #about .container .about_section {
+    display: flex;
+    flex-direction: column;
   }
 }

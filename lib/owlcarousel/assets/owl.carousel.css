@@ -34,6 +34,7 @@
   overflow: hidden;
   /* fix for flashing background */
   -webkit-transform: translate3d(0px, 0px, 0px);
+  text-align: -webkit-auto;
 }
 .owl-carousel .owl-wrapper,
 .owl-carousel .owl-item {
