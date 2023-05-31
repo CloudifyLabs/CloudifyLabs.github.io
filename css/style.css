@@ -192,6 +192,11 @@ h6 {
   text-align: center;
 }
 
+#intro .intro-info .intro-heading {
+  position: relative;
+  bottom: 20px;
+}
+
 #intro .intro-info h2 {
   color: #fff;
   margin-bottom: 40px;
@@ -605,6 +610,7 @@ h6 {
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;
+  text-align: justify;
 }
 
 #about .about-extra {
@@ -628,6 +634,11 @@ h6 {
   padding: 60px 0 40px 0;
   box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
+
+.product-section{
+  text-align: justify;
+}
+
 #products .product-link {
   text-align: center;
 }
@@ -709,6 +720,12 @@ h6 {
   margin-top: 10px;
 }
 
+#products .video {
+  width: 100%;
+  height: 22rem;
+  margin-top: 20px;
+}
+
 #why-us {
   padding: 60px 0;
   background: #004a99;
@@ -750,7 +767,7 @@ h6 {
 #why-us .card p {
   font-size: 16px;
   color: #d8eafe;
-  text-align: inherit;
+  text-align: justify;
 }
 
 #why-us .card .readmore {
@@ -1303,6 +1320,7 @@ h6 {
   margin-bottom: 0;
   font-family: "Montserrat", sans-serif;
   color: #ecf5ff;
+  text-align: justify;
 }
 
 #footer .footer-top .social-links a {
@@ -1336,6 +1354,8 @@ h6 {
 
 #footer .footer-top .footer-links {
   margin-bottom: 30px;
+  text-align: justify;
+  margin-left: auto;
 }
 
 #footer .footer-top .footer-links ul {
@@ -1482,6 +1502,10 @@ h6 {
     width: 100%;
   }
 
+  #intro .intro-info .intro-heading {
+    bottom: 0px;
+  }
+
   #intro .intro-info {
     text-align: center;
   }
@@ -1516,6 +1540,10 @@ h6 {
   #testimonials .testimonial-item p {
     margin-left: 0;
   }
+
+  #products .video {
+    height: auto;
+  }
 }
 
 @media (max-width: 574px) {
@@ -1529,4 +1557,15 @@ h6 {
     display: flex;
     flex-direction: column;
   }
+
+  #footer .footer-top .footer-links {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+.error-message {
+  font-size: 10px;
+  color: red;
+  text-align: left;
 }

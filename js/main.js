@@ -119,14 +119,18 @@
     items: 1
   });
 
-  const form = document.querySelector('.contactForm');
+  // const form = document.querySelector('.contactForm');
 
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const successMsg = document.querySelector('#sendmessage');
-    successMsg.style.display = 'block';
-    form.reset();
-  });
+  // form.addEventListener('submit', function(event) {
+  //   event.preventDefault();
+  //   const successMsg = document.querySelector('#sendmessage');
+  //   successMsg.style.display = 'block';
+  //   form.reset();
+
+  //   setTimeout(function() {
+  //     successMsg.style.display = 'none';
+  //   }, 3000);
+  // });
 
   // function toggleTeamMembers() {
   //   const screenWidth = $(window).width();
@@ -150,6 +154,41 @@
   //     seeMoreButton.css('display', 'block');
   //   }
   // }
+
+  $(document).ready(function() {
+    $('#number').on('input', function() {
+      var value = $(this).val();
+      value = value.replace(/[^0-9]/g, ''); // Remove non-digit characters
+      value = value.slice(0, 10); // Limit to maximum 10 digits
+      $(this).val(value);
+  
+      var errorElement = $(this).next('.error-message');
+      if (value.length !== 10) {
+        errorElement.show();
+      } else {
+        errorElement.hide();
+      }
+    });
+  });
+
+  $(document).ready(function() {
+    $('#email').on('input', function() {
+      var value = $(this).val();
+      var isValid = validateEmail(value);
+  
+      var errorElement = $(this).next('.error-message');
+      if (!isValid || value === '') {
+        errorElement.show();
+      } else {
+        errorElement.hide();
+      }
+    });
+  
+    function validateEmail(email) {
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  });
   
 
 })(jQuery);
